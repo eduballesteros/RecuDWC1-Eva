@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <title>Formulario con Galería</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1 class="text-center">Ejercicio de recuperación</h1>
+    </header>
+    <main>
+      <br />
+      <div class="container">
+        <div class="row">
+          <!-- Columna del formulario -->
+          <div class="col-md-6">
+            <!-- Formulario dentro de una tabla -->
+            <table class="table">
+              <form id="userForm">
+                <tr>
+                  <td><label for="email">Email:</label></td>
+                  <td><input type="email" id="email" class="form-control" required /></td>
+                </tr>
+                <tr>
+                  <td><label for="nombre">Nombre:</label></td>
+                  <td><input type="text" id="nombre" class="form-control" required /></td>
+                </tr>
+                <tr>
+                  <td><label>Selecciona preferencia:</label></td>
+                  <td>
+                    <input type="radio" id="mañana" name="horario" value="mañana" checked />
+                    <label for="mañana">Horario de mañana</label>
+                    <br />
+                    <input type="radio" id="tarde" name="horario" value="tarde" />
+                    <label for="tarde">Horario de tarde</label>
+                    <br />
+                    <input type="radio" id="nocturno" name="horario" value="nocturno" disabled />
+                    <label for="nocturno">Nocturno (no disponible)</label>
+                  </td>
+                </tr>
+                <tr>
+                  <td><label for="notificaciones">Enviar notificaciones:</label></td>
+                  <td><input type="checkbox" id="notificaciones" name="notificaciones" /></td>
+                </tr>
+                <tr>
+                  <td colspan="2" class="text-center">
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                  </td>
+                </tr>
+              </form>
+            </table>
+
+            <!-- Tabla dinámica -->
+            <div class="row mt-4">
+              <div class="col">
+                <table class="table table-bordered table-light bg-white">
+                  <thead>
+                    <tr>
+                      <th>Email</th>
+                      <th>Nombre</th>
+                      <th>Preferencia</th>
+                      <th>Notificaciones</th>
+                    </tr>
+                  </thead>
+                  <tbody id="dataTable">
+                    <!-- Filas dinámicas se añadirán aquí -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Columna de la galería -->
+          <div class="col-md-6">
+            <h3 class="text-center mb-3">Galería</h3>
+            <div class="row g-3">
+              <!-- Tarjeta 1 -->
+              <div class="col-md-6">
+                <div class="card">
+                  <img src="https://via.placeholder.com/150" class="card-img-top" alt="Imagen 1">
+                  <div class="card-body text-center">
+                    <p class="card-text">Imagen 1</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tarjeta 2 -->
+              <div class="col-md-6">
+                <div class="card">
+                  <img src="https://via.placeholder.com/150" class="card-img-top" alt="Imagen 2">
+                  <div class="card-body text-center">
+                    <p class="card-text">Imagen 2</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tarjeta 3 -->
+              <div class="col-md-6">
+                <div class="card">
+                  <img src="https://via.placeholder.com/150" class="card-img-top" alt="Imagen 3">
+                  <div class="card-body text-center">
+                    <p class="card-text">Imagen 3</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tarjeta 4 -->
+              <div class="col-md-6">
+                <div class="card">
+                  <img src="https://via.placeholder.com/150" class="card-img-top" alt="Imagen 4">
+                  <div class="card-body text-center">
+                    <p class="card-text">Imagen 4</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tarjeta 5 -->
+              <div class="col-md-6">
+                <div class="card">
+                  <img src="https://via.placeholder.com/150" class="card-img-top" alt="Imagen 5">
+                  <div class="card-body text-center">
+                    <p class="card-text">Imagen 5</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tarjeta 6 -->
+              <div class="col-md-6">
+                <div class="card">
+                  <img src="https://via.placeholder.com/150" class="card-img-top" alt="Imagen 6">
+                  <div class="card-body text-center">
+                    <p class="card-text">Imagen 6</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="text-center mt-4">
+      <p>Este es el proyecto-examen recuperación de la evaluación inicial</p>
+    </footer>
+
+    <script src="js/form.js"></script>
+  </body>
+</html>
