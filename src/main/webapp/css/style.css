@@ -50,4 +50,12 @@ main {
     object-fit: cover; /* Ajusta la imagen sin deformarla */
   }
   
+  footer{
+
+    footer {
+      position: relative; /* Asegura que el margen funcione correctamente */
+      margin-top: 20px;
+  }
   
+
+  }
