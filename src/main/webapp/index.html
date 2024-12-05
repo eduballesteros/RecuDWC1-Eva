@@ -1,14 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <title>Formulario con Galería</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -20,13 +15,11 @@
       <br />
       <div class="container">
         <div class="row">
-          <!-- Columna del formulario -->
           <div class="col-md-6">
-            <!-- Formulario dentro de una tabla -->
             <table class="table">
-              <form id="userForm">
+              <form id="formularioUsuario">
                 <tr>
-                  <td><label for="email">Email:</label></td>
+                  <td><label for="email">Correo electrónico:</label></td>
                   <td><input type="email" id="email" class="form-control" required /></td>
                 </tr>
                 <tr>
@@ -58,27 +51,25 @@
               </form>
             </table>
 
-            <!-- Tabla dinámica -->
             <div class="row mt-4">
               <div class="col">
                 <table class="table table-bordered table-light bg-white">
                   <thead>
                     <tr>
-                      <th>Email</th>
+                      <th>Correo electrónico</th>
                       <th>Nombre</th>
                       <th>Preferencia</th>
                       <th>Notificaciones</th>
                     </tr>
                   </thead>
-                  <tbody id="dataTable">
-                    <!-- Filas dinámicas se añadirán aquí -->
+                  <tbody id="tablaDatos">
                   </tbody>
                 </table>
               </div>
             </div>
           </div>
 
-          <!-- Columna de la galería -->
+
           <div class="col-md-6">
             <h3 class="text-center mb-3">Galería</h3>
             <div class="row g-3">
@@ -92,7 +83,6 @@
                 </div>
               </div>
 
-              <!-- Tarjeta 2 -->
               <div class="col-md-6">
                 <div class="card">
                   <img src="https://via.placeholder.com/150" class="card-img-top" alt="Imagen 2">
@@ -102,7 +92,6 @@
                 </div>
               </div>
 
-              <!-- Tarjeta 3 -->
               <div class="col-md-6">
                 <div class="card">
                   <img src="https://via.placeholder.com/150" class="card-img-top" alt="Imagen 3">
@@ -112,7 +101,6 @@
                 </div>
               </div>
 
-              <!-- Tarjeta 4 -->
               <div class="col-md-6">
                 <div class="card">
                   <img src="https://via.placeholder.com/150" class="card-img-top" alt="Imagen 4">
@@ -122,7 +110,6 @@
                 </div>
               </div>
 
-              <!-- Tarjeta 5 -->
               <div class="col-md-6">
                 <div class="card">
                   <img src="https://via.placeholder.com/150" class="card-img-top" alt="Imagen 5">
@@ -132,7 +119,6 @@
                 </div>
               </div>
 
-              <!-- Tarjeta 6 -->
               <div class="col-md-6">
                 <div class="card">
                   <img src="https://via.placeholder.com/150" class="card-img-top" alt="Imagen 6">
@@ -147,10 +133,13 @@
       </div>
     </main>
 
+    <hr class="hr" />
+
     <footer class="text-center mt-4">
       <p>Este es el proyecto-examen recuperación de la evaluación inicial</p>
     </footer>
 
-    <script src="js/form.js"></script>
+    <script type="module" src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
 </html>
