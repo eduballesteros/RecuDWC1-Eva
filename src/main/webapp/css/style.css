@@ -1,61 +1,82 @@
-header{
-    display: flex;
-    background-color:dodgerblue;
-    align-items: center;
-    justify-content: center;
-    height: 75px;
-    
+header {
+  display: flex;
+  background-color: dodgerblue;
+  align-items: center;
+  justify-content: center;
+  height: 75px;
+
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 main {
-    margin-left: 40px;  /* Margen izquierdo */
-    margin-right: 40px; /* Margen derecho */
-    background-color: deepskyblue; /* Fondo blanco para el main */
-  }
+  margin-left: 40px;
+  /* Margen izquierdo */
+  margin-right: 40px;
+  /* Margen derecho */
+  background-color: deepskyblue;
+  /* Fondo blanco para el main */
+}
 
-  .text-center button {
-    width: 100%; 
-    padding: 5px 0; 
-    font-size: 18px; 
-    border-radius: 5px; 
-    background-color: #007bff; 
-    color: white; 
-    border: none; 
-  }
+.text-center button {
+  width: 100%;
+  padding: 5px 0;
+  font-size: 18px;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+}
 
-  .card {
-    border: 1px ; /* Borde suave */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra elegante */
-    transition: transform 0.3s ease;
-  }
-  
-  .card:hover {
-    transform: scale(1.05); /* Efecto de zoom */
-  }
-  
-  .card-title {
-    font-size: 1.2rem;
-    color: #333;
-    margin-bottom: 10px;
-  }
-  
-  .card-img-top {
-    height: 150px;
-    object-fit: cover; /* Ajusta la imagen sin deformarla */
-  }
-  
-  footer{
+.card {
+  border: 1px;
+  /* Borde suave */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* Sombra elegante */
+  transition: transform 0.3s ease;
+}
 
-    footer {
-      position: relative; /* Asegura que el margen funcione correctamente */
-      margin-top: 20px;
-  }
-  
+.card:hover {
+  transform: scale(1.05);
+  /* Efecto de zoom */
+}
 
-  }
+.card-title {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.card-img-top {
+  height: 150px;
+  object-fit: cover;
+  /* Ajusta la imagen sin deformarla */
+}
+
+footer {
+  position: relative;
+  /* Asegura que el margen funcione correctamente */
+  margin-top: 20px;
+}
+
+
+/* Estilo para la imagen grande en el div */
+#imagenGrande {
+  max-width: 100%;
+  max-height: 80vh;
+  display: block;
+  margin: 0 auto;
+}
+
+.imagen-galeria {
+  cursor: pointer;
+}
+
+/* Ocultar las imágenes pequeñas cuando se vea la imagen grande */
+.imagen-oculta {
+  display: none;
+}
