@@ -1,36 +1,46 @@
-export function gestionFormulario() {
+// Función para manejar el envío del formulario y agregar los datos a la tabla
+export function manejarFormulario(event) {
+  event.preventDefault(); // Prevenir el comportamiento por defecto del formulario (que recargue la página)
 
-  document.getElementById("formularioUsuario").addEventListener("submit", function (event) {
-    event.preventDefault();
+  // Obtener los valores del formulario
+  const email = document.getElementById("email").value;
+  const nombre = document.getElementById("nombre").value;
+  const horario = document.querySelector('input[name="horario"]:checked').value;
+  const notificaciones = document.getElementById("notificaciones").checked ? 'Sí' : 'No';
 
-    // Obtener los valores del formulario
-    const email = document.getElementById("email").value;
-    const nombre = document.getElementById("nombre").value;
-    const horario = document.querySelector('input[name="horario"]:checked').value;
-    const notificaciones = document.getElementById("notificaciones").checked ? "Sí" : "No";
+  // Crear una nueva fila en la tabla con los datos
+  const tabla = document.getElementById("tablaDatos");
+  const fila = document.createElement("tr");
+  fila.innerHTML = `
+    <td>${email}</td>
+    <td>${nombre}</td>
+    <td>${horario}</td>
+    <td>${notificaciones}</td>
+  `;
+  
+  // Agregar la nueva fila a la tabla
+  tabla.appendChild(fila);
 
-    const nuevaFila = document.createElement("tr");
-
-    const correoCelda = document.createElement("td");
-    correoCelda.textContent = email;
-    nuevaFila.appendChild(correoCelda);
-
-    const nombreCelda = document.createElement("td");
-    nombreCelda.textContent = nombre;
-    nuevaFila.appendChild(nombreCelda);
-
-    const horarioCelda = document.createElement("td");
-    horarioCelda.textContent = horario;
-    nuevaFila.appendChild(horarioCelda);
-
-    const notificacionesCelda = document.createElement("td");
-    notificacionesCelda.textContent = notificaciones;
-    nuevaFila.appendChild(notificacionesCelda);
-
-    document.getElementById("tablaDatos").appendChild(nuevaFila);
-
-    document.getElementById("formularioUsuario").reset();
-  });
-
+  // Limpiar el formulario
+  document.getElementById("formularioUsuario").reset();
+}
+// Función para mostrar la imagen en grande en el div
+export function verEnGrande(imagen) {
+  const imagenUrl = imagen.src;
+  const imagenGrande = document.getElementById("imagenGrande");
+  imagenGrande.src = imagenUrl;
+  document.getElementById("imagenGrandeContenedor").style.display = "block";
+  
+  // Ocultar todas las imágenes pequeñas
+  const imagenes = document.querySelectorAll(".imagen-galeria");
+  imagenes.forEach(imagen => imagen.classList.add("imagen-oculta"));
 }
 
+// Función para cerrar la imagen grande
+export function cerrarImagen() {
+  document.getElementById("imagenGrandeContenedor").style.display = "none";
+  
+  // Mostrar nuevamente las imágenes pequeñas
+  const imagenes = document.querySelectorAll(".imagen-galeria");
+  imagenes.forEach(imagen => imagen.classList.remove("imagen-oculta"));
+}
