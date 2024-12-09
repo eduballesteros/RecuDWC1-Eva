@@ -1,14 +1,12 @@
 // Función para manejar el envío del formulario y agregar los datos a la tabla
 export function manejarFormulario(event) {
-  event.preventDefault(); // Prevenir el comportamiento por defecto del formulario (que recargue la página)
+  event.preventDefault(); // Prevenir que se recargue la página al darle a enviar.
 
-  // Obtener los valores del formulario
   const email = document.getElementById("email").value;
   const nombre = document.getElementById("nombre").value;
   const horario = document.querySelector('input[name="horario"]:checked').value;
   const notificaciones = document.getElementById("notificaciones").checked ? 'Sí' : 'No';
 
-  // Crear una nueva fila en la tabla con los datos
   const tabla = document.getElementById("tablaDatos");
   const fila = document.createElement("tr");
   fila.innerHTML = `
@@ -18,13 +16,11 @@ export function manejarFormulario(event) {
     <td>${notificaciones}</td>
   `;
   
-  // Agregar la nueva fila a la tabla
   tabla.appendChild(fila);
 
-  // Limpiar el formulario
   document.getElementById("formularioUsuario").reset();
 }
-// Función para mostrar la imagen en grande en el div
+ // Función para ampliar la imagen
 export function verEnGrande(imagen) {
   const imagenUrl = imagen.src;
   const imagenGrande = document.getElementById("imagenGrande");
